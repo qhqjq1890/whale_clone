@@ -1,0 +1,89 @@
+@import "reset.scss";
+
+body {
+  background-image: url("../../horsehead.jpg");
+  width: 100vw;
+  .input_wrapper {
+    width: 100%;
+    padding-top: 190px;
+    display: flex;
+    justify-content: center;
+
+    input {
+      background-color: rgba(#7d7d7d, 0.5);
+      border-radius: 0.5rem;
+      border: none;
+      height: 50px;
+      width: 560px;
+      padding-left: 60px;
+      transition: background-color 0.3s ease; /* 배경색이 서서히 변경되도록 설정 */
+    }
+    input::placeholder {
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s ease; /* 텍스트 색상이 서서히 변경되도록 설정 */
+    }
+    .icon {
+      fill: white; /* 기본 색상 */
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      transform: translate(-250px);
+      transition: fill 0.3s ease; /* 아이콘 색상이 서서히 변경되도록 설정 */
+    }
+
+    input:focus {
+      background-color: rgba(white, 0.8);
+      &::placeholder {
+        color: rgba(#7d7d7d, 0.8);
+      }
+      + .icon {
+        fill: #2db400;
+      }
+    }
+  }
+  .carousel {
+    align-items: center;
+    margin-top: 5rem;
+    justify-content: center;
+    font-family: "Noto Sans KR", sans-serif;
+    .clock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        color: white;
+        font-weight: 500;
+        font-size: 150px;
+      }
+      .detail_clock {
+        display: flex;
+        height: 100px;
+        flex-direction: column;
+        color: white;
+        font-weight: 400;
+        font-size: 44px;
+        padding: 0px 20px;
+        justify-content: space-between;
+        :nth-child(1) {
+          color: rgba(white, 0.6);
+          padding-bottom: 4px;
+          border-bottom: 0.1px solid rgba(white, 0.2);
+        }
+        :nth-child(2) {
+          font-weight: 200;
+          font-size: 56px;
+        }
+        align-items: center;
+      }
+    }
+    h3 {
+      display: flex;
+      justify-content: center;
+      color: white;
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}
