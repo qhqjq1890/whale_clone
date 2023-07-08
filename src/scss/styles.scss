@@ -47,6 +47,7 @@ body {
     margin-top: 5rem;
     justify-content: center;
     font-family: "Noto Sans KR", sans-serif;
+    height: 580px;
     .clock {
       display: flex;
       justify-content: center;
@@ -84,6 +85,24 @@ body {
       margin-top: 10px;
       font-size: 24px;
       font-weight: 400;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    div {
+      border-radius: 0.5rem;
+      margin-right: 20px;
+      padding: 10px 10px 10px 10px;
+      &:hover {
+        background-color: rgba(white, 0.2);
+        cursor: pointer;
+      }
+      .weather {
+        display: flex;
+        flex-direction: row;
+      }
     }
   }
 }
