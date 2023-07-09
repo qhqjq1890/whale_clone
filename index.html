@@ -20,14 +20,45 @@
     </input>
   </div>
   <div class="carousel">
-    <div class="clock">
-      <h1 id="hm">HH</h1>
-      <div class="detail_clock">
-        <p id="period">PM</p>
-        <p id="sec">30</p>
+    <div class="outer">
+      <div class="container">
+
+        <div class="slide" id="slide0">
+          <div class="clock">
+            <h1 id="hm">HH</h1>
+            <div class="detail_clock">
+              <p id="period">PM</p>
+              <p id="sec">30</p>
+            </div>
+          </div>
+          <h3 id="date">YYYY-MM-dd</h3>
+        </div>
+
+        <div class="slide" id="slide1">
+          <div class="grid">
+            <div class="item">+</div>
+            <div class="item">+</div>
+            <div class="item">+</div>
+            <div class="item">+</div>
+            <div class="item">+</div>
+            <div class="item">+</div>
+            <div class="item">+</div>
+          </div>
+        </div>
+
+        <div class="slide" id="slide2">
+          <div class="e-ma">
+            기모륑~
+          </div>
+        </div>
+
       </div>
     </div>
-    <h3 id="date">YYYY-MM-dd</h3>
+    <div class="carousel-indicators">
+      <div class="indicator" data-target="0">●</div>
+      <div class="indicator" data-target="1">●</div>
+      <div class="indicator" data-target="2">●</div>
+    </div>
   </div>
 
   <div class="footer">

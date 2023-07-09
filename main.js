@@ -42,6 +42,33 @@ async function getWeather() {
   }
 }
 
+var slideDistances = ["0vw", "-100vw", "-200vw"];
+var indicators = document.querySelectorAll(".indicator");
+
+//캐러셀 페이지 업데이트를 위한 함수로 indicator은 슬라이드 페이지를 의미함
+function updateIndicators(targetIndex) {
+  indicators.forEach(function (indicator, index) {
+    if (index === targetIndex) {
+      indicator.classList.add("active");
+    } else {
+      indicator.classList.remove("active");
+    }
+  });
+}
+
+indicators.forEach(function (indicator) {
+  indicator.addEventListener("click", function (e) {
+    var targetIndex = parseInt(e.target.getAttribute("data-target"));
+    var distance = slideDistances[targetIndex];
+
+    document.querySelector(".container").style.transform =
+      "translateX(" + distance + ")";
+    updateIndicators(targetIndex);
+  });
+});
+
+updateIndicators(0);
+
 getClock();
 getDate();
 getWeather();
