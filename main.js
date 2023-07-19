@@ -28,7 +28,7 @@ function getDate() {
 async function getWeather() {
   try {
     const response = await fetch(
-      "http://api.weatherapi.com/v1/current.json?key=ed243edc132d40e7b00151036230807&q=Seoul&lang=ko"
+      "http://api.weatherapi.com/v1/current.json?key={OWN_KEY}&q=Seoul&lang=ko"
     );
     const data = await response.json();
     console.log(data.current.condition.icon);
